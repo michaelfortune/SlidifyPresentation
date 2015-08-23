@@ -1,0 +1,58 @@
+---
+title       : Loan Presentation
+subtitle    : Calculate loan repayments
+author      : Michael Fortune
+job         : Data Scientist
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+<br>
+<h3>Loan Payment Calculator Presentation</h4> 
+<br>
+<h5>Author: Michael Fortune</h5>
+<h5>Date: 20 Aug 2015</h5>
+<br>
+<h4>Introduction</h4>
+<br>
+This application is designed to calculate loan repayments for a given loan amount and interest rate. Many people do not
+realise that in order to reduce the loan period significantly, 
+a modest increase in monthly is all that is required. This 
+shiny application allows people to do just that. You begin by
+selecting the intersset rate, amount of the loan and a typical
+repayment period. This will calculate the monthly repayments
+and the total repayment over the chosen period. You can then adjust the repayment period down or up and instantly see the difference. By adjusting the values, one can easily see what the effect can be i.e how much you might save, or how much more you might be able to borrow if a longer repayment period is chosen.
+
+--- .class #id 
+
+<br><br><br>
+
+A reason for the difference is that the capital is being paid off at an accelerated rate with each payment. Where the interest rates are low, there is little financial advantage in repaying a loan over a shorter period, but this changes markedly as interest rises. Where the interest rates approach double figures, the differences can be significant. This can be seen easily using the app.  
+<br>
+The app itself is known as a shiny app and is hosted at shinyapps.io, by the people who developed RStudio. In terms of code structure, there are effectively two parts: a user interface (ui.R) and a server part (server.R). The ui provide the mechanism for entering the values, while the server part does the calculating of the payment and the rendering of the graphical output.
+
+--- .class #id 
+
+As mentioned above, the shiny app is hosted at shiny apps. The actual url is: (https://michaelfortune.shinyapps.io/LoanPayments)
+
+The app opens with default values showing that for a loan of £100,000 over a 20 year (240 months) and an annual compounded interest rate of 1%, the repayments would be 240 payments of £460, totaling just over £110,000. Changing the repayment period to 15 years (180 month) results in 180 payments of £598, or a total of almost £108,000. In this particular case, there is little to be gained by reducing the period. The reason for this, is the low rate of interest:
+
+![shinyapp4] (https://raw.githubusercontent.com/michaelfortune/LoanRepayment-Shiny-App/master/Shiny100K1perc180.PNG)
+
+--- .class #id 
+
+Here, for a loan of £100,000 over 20 years at 9%, the repayments would be 240 x 900 payments, or a total of almost £216,000 
+
+![shinyapp2] (https://raw.githubusercontent.com/michaelfortune/LoanRepayment-Shiny-App/master/shiny9_240.PNG)
+
+In conclusion, it is clear that the use of the shiny app will provide a useful means for people seeking loans, or otherwise managing long-term loans by providing an insight into the effect of increasing, or reducing repayments on the length of a loan and the amount of the toal repayment as well as the interplay of the interest rates. 
+<br>
+I trust that this was useful. If so, please visit the [shiny] (https://michaelfortune.shinyapps.io/LoanPayments) apps site and try it for youself.
+
+
+
+

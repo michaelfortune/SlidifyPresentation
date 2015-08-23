@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Loan Presentation</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Loan Presentation">
+  <meta name="author" content="Michael Fortune">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Loan Presentation</h1>
+    <h2>Calculate loan repayments</h2>
+    <p>Michael Fortune<br/>Data Scientist</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <article data-timings="">
+    <p><br>
+<h3>Loan Payment Calculator Presentation</h4> 
+<br></p>
+
+<h5>Author: Michael Fortune</h5>
+
+<h5>Date: 20 Aug 2015</h5>
+
+<p><br></p>
+
+<h4>Introduction</h4>
+
+<p><br>
+This application is designed to calculate loan repayments for a given loan amount and interest rate. Many people do not
+realise that in order to reduce the loan period significantly, 
+a modest increase in monthly is all that is required. This 
+shiny application allows people to do just that. You begin by
+selecting the intersset rate, amount of the loan and a typical
+repayment period. This will calculate the monthly repayments
+and the total repayment over the chosen period. You can then adjust the repayment period down or up and instantly see the difference. By adjusting the values, one can easily see what the effect can be i.e how much you might save, or how much more you might be able to borrow if a longer repayment period is chosen.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <article data-timings="">
+    <p><br><br><br></p>
+
+<p>A reason for the difference is that the capital is being paid off at an accelerated rate with each payment. Where the interest rates are low, there is little financial advantage in repaying a loan over a shorter period, but this changes markedly as interest rises. Where the interest rates approach double figures, the differences can be significant. This can be seen easily using the app.<br>
+<br>
+The app itself is known as a shiny app and is hosted at shinyapps.io, by the people who developed RStudio. In terms of code structure, there are effectively two parts: a user interface (ui.R) and a server part (server.R). The ui provide the mechanism for entering the values, while the server part does the calculating of the payment and the rendering of the graphical output.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <article data-timings="">
+    <p>As mentioned above, the shiny app is hosted at shiny apps. The actual url is: (<a href="https://michaelfortune.shinyapps.io/LoanPayments">https://michaelfortune.shinyapps.io/LoanPayments</a>)</p>
+
+<p>The app opens with default values showing that for a loan of £100,000 over a 20 year (240 months) and an annual compounded interest rate of 1%, the repayments would be 240 payments of £460, totaling just over £110,000. Changing the repayment period to 15 years (180 month) results in 180 payments of £598, or a total of almost £108,000. In this particular case, there is little to be gained by reducing the period. The reason for this, is the low rate of interest:</p>
+
+<p><img src="https://raw.githubusercontent.com/michaelfortune/LoanRepayment-Shiny-App/master/Shiny100K1perc180.PNG" alt="shinyapp4"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <article data-timings="">
+    <p>Here, for a loan of £100,000 over 20 years at 9%, the repayments would be 240 x 900 payments, or a total of almost £216,000 </p>
+
+<p><img src="https://raw.githubusercontent.com/michaelfortune/LoanRepayment-Shiny-App/master/shiny9_240.PNG" alt="shinyapp2"></p>
+
+<p>In conclusion, it is clear that the use of the shiny app will provide a useful means for people seeking loans, or otherwise managing long-term loans by providing an insight into the effect of increasing, or reducing repayments on the length of a loan and the amount of the toal repayment as well as the interplay of the interest rates. 
+<br>
+I trust that this was useful. If so, please visit the <a href="https://michaelfortune.shinyapps.io/LoanPayments">shiny</a> apps site and try it for youself.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='NA'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='NA'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='NA'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='NA'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
